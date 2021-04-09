@@ -1,16 +1,6 @@
-/*
 
 
-
-If you want to know how this game was made, check out this video, that explains how it's made: 
-
-https://youtu.be/eue3UdFvwPo
-
-Follow me on twitter for more: https://twitter.com/HunorBorbely
-
-*/
-
-// Extend the base functionality of JavaScript
+console.log()
 Array.prototype.last = function () {
     return this[this.length - 1];
   };
@@ -70,8 +60,9 @@ Array.prototype.last = function () {
   const ctx = canvas.getContext("2d");
   
   const introductionElement = document.getElementById("introduction");
-  const perfectElement = document.getElementById("perfect");
   const container = document.querySelector('.container')
+  const btn = document.querySelector('.strech')
+  const perfectElement = document.getElementById("perfect");
   const restartButton = document.getElementById("restart");
   const scoreElement = document.getElementById("score");
   
@@ -89,6 +80,7 @@ Array.prototype.last = function () {
     introductionElement.style.opacity = 1;
     perfectElement.style.opacity = 0;
     restartButton.style.display = "none";
+    btn.style.display = "block"
     scoreElement.innerText = score;
   
     // The first platform is always the same
@@ -278,6 +270,7 @@ Array.prototype.last = function () {
           platformHeight + 100 + (window.innerHeight - canvasHeight) / 2;
         if (heroY > maxHeroY) {
           restartButton.style.display = "block";
+          btn.style.display = "none"
           return;
         }
         break;

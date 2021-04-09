@@ -76,6 +76,19 @@ body {
   transition: opacity 2s;
 }
 
+.strech{
+  position: absolute;
+  z-index: 5;
+  width: 100px;
+  height: 60px;
+  border-radius: 70px;
+  border: none;
+  background-color: blue;
+  color: white;
+  opacity: 0.2;
+  outline: none !important;
+}
+
 #youtube,
 #youtube-card {
   display: none;
