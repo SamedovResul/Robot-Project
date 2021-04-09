@@ -168,7 +168,7 @@ Array.prototype.last = function () {
     }
   });
   
-  window.addEventListener("mousedown", function (event) {
+  window.addEventListener("click", function (event) {
     if (phase == "waiting") {
       lastTimestamp = undefined;
       introductionElement.style.opacity = 0;
@@ -177,7 +177,7 @@ Array.prototype.last = function () {
     }
   });
   
-  window.addEventListener("mouseup", function (event) {
+  container.addEventListener("click", function (event) {
     if (phase == "stretching") {
       phase = "turning";
     }
